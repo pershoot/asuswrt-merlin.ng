@@ -62,7 +62,7 @@ PROJECT(PCRE C CXX)
 
 # Increased minimum to 2.8.0 to support newer add_test features
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.0)
+cmake_minimum_required(VERSION 3.5)
 
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake) # for FindReadline.cmake
 

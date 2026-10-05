@@ -178,11 +178,11 @@ check:	validateminixml validateminiwget validateupnpreplyparse \
 everything:	all $(EXECUTABLES_ADDTESTS)
 
 pythonmodule:	$(LIBRARY) miniupnpcmodule.c setup.py
-	MAKE=$(MAKE) python setup.py build
+	MAKE=$(MAKE) python3 setup.py build
 	touch $@
 
 installpythonmodule:	pythonmodule
-	MAKE=$(MAKE) python setup.py install
+	MAKE=$(MAKE) python3 setup.py install
 
 pythonmodule3:	$(LIBRARY) miniupnpcmodule.c setup.py
 	MAKE=$(MAKE) python3 setup.py build
@@ -231,7 +231,7 @@ clean:
 	$(RM) validateigddescparse
 	$(RM) minihttptestserver
 	$(RM) -r build/ dist/
-	#python setup.py clean
+	#python3 setup.py clean
 	# clean jnaerator stuff
 	$(RM) _jnaerator.* java/miniupnpc_$(OS).jar
 
@@ -361,7 +361,7 @@ mvn_install:
 
 # make .deb packages
 deb: /usr/share/pyshared/stdeb all
-	(python setup.py --command-packages=stdeb.command bdist_deb)
+	(python3 setup.py --command-packages=stdeb.command bdist_deb)
 
 # install .deb packages
 ideb:

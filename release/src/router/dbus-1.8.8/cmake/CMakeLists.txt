@@ -7,7 +7,7 @@ set(CMAKE_LEGACY_CYGWIN_WIN32 0)
 project(dbus)
 
 # we need to be up to date
-CMAKE_MINIMUM_REQUIRED(VERSION 2.4.4 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 if(COMMAND cmake_policy)
     cmake_policy(SET CMP0003 NEW)
 endif(COMMAND cmake_policy)
