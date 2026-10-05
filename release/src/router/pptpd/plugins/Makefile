@@ -1,4 +1,4 @@
-CC	= gcc
+CC	= $(CROSS_COMPILE)gcc
 COPTS	= -O2 -g
 CFLAGS	= $(COPTS) -I.. -I../../include -fPIC
 LDFLAGS	= -shared

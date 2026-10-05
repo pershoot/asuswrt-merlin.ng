@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 #***********************************************************************
 #
 #  Copyright (c) 2006  Broadcom Corporation
@@ -3937,3 +3938,10 @@ WEB_CLEAN_$(strip $(1)):
 
 endef
 # ^-----------------------------------^
+
+# GCC 15 bypass flags
+GCC15_FLAGS := -std=gnu17 -Wno-implicit-int -Wno-implicit-function-declaration -Wno-int-conversion -Wno-incompatible-pointer-types
+CFLAGS += $(GCC15_FLAGS)
+CXXFLAGS += $(GCC15_FLAGS)
+HOSTCFLAGS += $(GCC15_FLAGS)
+export HOSTCFLAGS
