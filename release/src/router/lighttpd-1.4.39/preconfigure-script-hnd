@@ -1,3 +1,4 @@
+#!/bin/bash
 ####	set path variable #####
 cur_dir=`pwd`									### current directory
 router_dir=$cur_dir/..
