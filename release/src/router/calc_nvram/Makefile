@@ -14,7 +14,7 @@ calc_nvram: calc_nvram.o
 	$(TOP)/calc_nvram/calc_nvram
 
 run_python:
-	@-type -P python >/dev/null 2>&1 && python $(TOP)/calc_nvram/calc_nvram.py $(TOP)
+		python3 $(TOP)/calc_nvram/calc_nvram.py $(TOP)
 
 install:
 
